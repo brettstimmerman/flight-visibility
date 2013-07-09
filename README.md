@@ -44,6 +44,11 @@ define(['flight-visibility'], function (Visibility) {
 });
 ```
 
+## Known Issues
+
+An open [Chromium issue](https://code.google.com/p/chromium/issues/detail?id=117082)
+prevents minimized windows from becoming hidden on OS X.
+
 ## Development
 
 Development of this component requires [Bower](http://bower.io), and preferably
