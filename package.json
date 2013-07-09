@@ -1,0 +1,12 @@
+{
+  "name": "flight-visibility",
+  "description": "A Flight component for the Page Visibility API.",
+  "version": "0.0.0",
+  "author": "Brett Stimmerman",
+  "devDependencies": {
+    "karma": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
+  }
+}

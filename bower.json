@@ -1,0 +1,24 @@
+{
+  "name": "flight-visibility",
+  "description": "A Flight component for the Page Visibility API.",
+  "version": "0.0.0",
+  "author": "Brett Stimmerman",
+  "main": "lib/visibility.js",
+  "dependencies": {
+    "flight": "~1.0.9"
+  },
+  "devDependencies": {
+    "jasmine-flight": "*",
+    "jasmine-jquery": "*"
+  },
+  "ignore": [
+    ".gitignore",
+    ".gitattributes",
+    ".travis.yml",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "test",
+    "package.json",
+    "karma.conf.js"
+  ]
+}
