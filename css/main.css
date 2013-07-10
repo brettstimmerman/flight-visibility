@@ -1,0 +1,88 @@
+html {
+  color: #222;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+a {
+  color: #069;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 35em;
+  padding: 0 1.25em;
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #ccc;
+  padding: 2.5em;
+  margin: 2.5em -1.25em;
+  text-align: center;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 4em;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.site-footer {
+  border-top: 1px solid #ccc;
+  color: #777;
+  font-size: 0.84em;
+  margin-top: 3em;
+}
+
+
+.btn {
+  background: #0097cf;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.75em 1.5em;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background: #04a2dd;
+}
+
+.btn:active {
+  background: #03739c;
+  box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.timer-container {
+  background: #000;
+  color: #ddd;
+  border-radius: 5px;
+  text-align: center;
+  margin: 3em auto;
+}
+
+.timer {
+  color: #0f0;
+  font-size: 5em;
+  padding: 0.1em 0;
+  text-shadow: 0 0 1em rgba(255, 255, 255, 0.8);
+}
+
+.error { color: #f00; }
+
+
+pre {
+  background: #eee;
+  border-radius: 5px;
+  font-size: 0.75em;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "flight-visibility",
+  "description": "A Flight component for the Page Visibility API.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Brett Stimmerman"
+  },
+  "main": "lib/visibility.js",
+  "dependencies": {
+    "flight": "~1.0.9"
+  },
+  "devDependencies": {
+    "jasmine-flight": "*",
+    "jasmine-jquery": "*"
+  },
+  "ignore": [
+    ".gitignore",
+    ".gitattributes",
+    ".travis.yml",
+    "CONTRIBUTING.md",
+    "CHANGELOG.md",
+    "test",
+    "package.json",
+    "karma.conf.js"
+  ],
+  "gitHead": "105fb89bfb126e727c987950617afd4e9dfc470f",
+  "readme": "# flight-visibility [![Build Status](https://secure.travis-ci.org/brettstimmerman/flight-visibility.png)](http://travis-ci.org/brettstimmerman/flight-visibility)\n\nA [Flight](https://github.com/twitter/flight) component for the\n[Page Visibility API](https://developer.mozilla.org/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API).\n\n\n## Installation\n\n```bash\nbower install --save flight-visibility\n```\n\n## Example\n\n```js\ndefine(['flight-visibility'], function (Visibility) {\n\n  $(document).on('visibility-supported', function () {\n    console.log('Page visibility is supported.');\n  });\n\n  $(document).on('visibility-unsupported', function () {\n    console.log('Page visibility is not supported.');\n  });\n\n  $(document).on('visibility-visible', function () {\n    console.log('The page is visible.');\n  });\n\n  $(document).on('visibility-hidden', function () {\n    console.log('The page is hidden.');\n  });\n\n  $(document).on('visibility-prerender', function () {\n    console.log('The page is pre-rendering.');\n  });\n\n  $(document).on('visibility-change', function (e, state) {\n    console.log('State:', state);\n  });\n\n  Visibility.attachTo(document);\n\n});\n```\n\n## Development\n\nDevelopment of this component requires [Bower](http://bower.io), and preferably\n[Karma](http://karma-runner.github.io) to be globally installed:\n\n```bash\nnpm install -g bower karma\n```\n\nThen install the Node.js and client-side dependencies by running the following\ncommands in the repo's root directory.\n\n```bash\nnpm install\nbower install\n```\n\nTo continuously run the tests in Chrome and Firefox during development, just run:\n\n```bash\nkarma start\n```\n\n## Contributing to this project\n\nAnyone and everyone is welcome to contribute. Please take a moment to\nreview the [guidelines for contributing](CONTRIBUTING.md).\n\n* [Bug reports](CONTRIBUTING.md#bugs)\n* [Feature requests](CONTRIBUTING.md#features)\n* [Pull requests](CONTRIBUTING.md#pull-requests)\n",
+  "readmeFilename": "README.md",
+  "_id": "flight-visibility@0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brettstimmerman/flight-visibility.git"
+  }
+}

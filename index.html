@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>flight-visibility</title>
+  <meta name="description" content="A Flight component for the Page Visibility API.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="http://twitter.com/favicons/favicon.ico">
+  <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="site-header" role="banner">
+      <h1 class="site-title">flight-visibility</h1>
+
+      <h2 class="site-tagline">
+        A <a href="http://twitter.github.io/flight">Flight</a> component for the
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API">
+          Page Visibility API</a>
+      </h2>
+
+      <a class="Button btn" href="https://github.com/brettstimmerman/flight-visibility">View on GitHub</a>
+    </div>
+
+    <div class="site-main" role="main">
+      <h2>About</h2>
+      <p>flight-visibility wraps the Page Visibility API for use in Flight applications.</p>
+
+      <p>Use the Page Visibility API to determine when a page is visible to
+        the user. Visible means the browser window is not minified and the page
+        is in the active browser tab.
+      </p>
+
+      <p>The Page Visibility API is already
+        <a href="http://caniuse.com/#feat=pagevisibility">supported by most browsers</a>.
+        </p>
+
+      <h2>Demo</h2>
+      <p>The timer below displays how long this page has been visible. When this
+         page is minimized or another tab is selected, the timer will pause.
+         When this page is returned to, the timer will continue.
+      </p>
+
+      <span class="error"></span>
+
+      <div class="timer-container">
+        <div class="timer">0</div>
+      </div>
+
+      <p>Below is the JavaScript snippet that powers the timer demo above.</p>
+
+      <pre><code>
+  require(
+    [
+      'flight-visibility/lib/visibility',
+      '../js/timer'
+    ],
+
+    function (Visibility, timer) {
+      timer.start();
+
+      $(document).on('visibility-unsupported', function () {
+        $('.error').html('Oops! The Page Visibility API is not supported.');
+      });
+
+      $(document).on('visibility-hidden', timer.pause);
+      $(document).on('visibility-visible', timer.resume);
+
+      Visibility.attachTo(document);
+    }
+  );
+      </code></pre>
+
+      <p>For more information about using flight-visibility, see the
+        <a href="https://github.com/brettstimmerman/flight-visibility/blob/master/README.md">full documentation</a>.
+      </p>
+    </div>
+
+    <div class="site-footer">
+      <p><a href="https://github.com/brettstimmerman/flight-visibility">flight-visibility</a>
+        is licensed under the
+        <a href="http://opensource.org/licenses/MIT" targ="_blank">MIT License</a>.
+
+        Documentation licensed under
+        <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+      </p>
+    </div>
+  </div>
+
+  <script src="bower_components/jquery/jquery.min.js"></script>
+  <script src="bower_components/es5-shim/es5-shim.min.js"></script>
+  <script src="bower_components/es5-shim/es5-sham.min.js"></script>
+  <script src="bower_components/requirejs/require.js"></script>
+
+  <script>
+    require.config({
+      baseUrl: 'bower_components'
+    });
+
+    require(
+      [
+        'flight-visibility/lib/visibility',
+        '../js/timer'
+      ],
+
+      function (Visibility, timer) {
+        timer.start();
+
+        $(document).on('visibility-unsupported', function () {
+          $('.error').html('Oops! The Page Visibility API is not supported.');
+        });
+
+        $(document).on('visibility-hidden', timer.pause);
+        $(document).on('visibility-visible', timer.resume);
+
+        Visibility.attachTo(document);
+      }
+    );
+  </script>
+</body>
+</html>

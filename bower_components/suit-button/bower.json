@@ -1,0 +1,21 @@
+{
+  "name": "suit-button",
+  "version": "2.0.0",
+  "author": {
+    "name": "Nicolas Gallagher"
+  },
+  "main": "button.css",
+  "ignore": [
+    "CHANGELOG.md",
+    "test.html"
+  ],
+  "gitHead": "9e3732d29cc90e0aade48d03b7f7a6b43a3fd1c0",
+  "readme": "# SUIT button\n\nA SUIT component that provides a structural UI button template.\nIt requires a button theme.\n\nRead more about [SUIT's design principles](https://github.com/necolas/suit/).\n\n## Installation\n\n* [Bower](http://bower.io/): `bower install --save suit-button`\n* Download: [zip](https://github.com/necolas/suit-button/zipball/master)\n* Git: `git clone https://github.com/necolas/suit-button.git`\n\n## Usage\n\nLike all SUIT components, suit-button relies on a base component class that is\nextended by any number of additional modifier classes.\n\n```html\n<a class=\"Button Button--full\" href=\"[url]\">Sign up</button>\n\n<button class=\"Button is-disabled\" type=\"submit\">Submit</button>\n\n<input class=\"Button is-pressed\" type=\"submit\" value=\"Submit\">\n```\n\n## Core HTML classes\n\n* `Button` - [core] The core button component\n* `Button--full` - [modifier] The modifier class for full-width buttons\n* `is-disabled` - [state] For disabled-state button styles (themes)\n\nN.B. You must also include the `disabled` attribute on `button` and `input`\nelements. For `a` elements, you should remove the `href` attribute and prevent\nJavaScript event handlers from firing.\n\n## Theme HTML classes\n\nThe following modifier and state classes should be implemented by all themes.\nThis ensures that themes can hook into a shared set of HTML class names. You're\nstill free to create additional, custom modifier names if your theme requires\nthem.\n\n* `Button--largest` (optional) - [modifier] Largest button size\n* `Button--large` - [modifier] Large button size\n* `Button--small` - [modifier] Small button size\n* `Button--smallest` (optional) - [modifier] Smallest button size\n* `Button--default` - [modifier] Default button style of your theme\n* `is-disabled` - [state] For disabled-state button styles\n* `is-pressed` - [state] For pressed-state button styles\n\nN.B. You should try to avoid styling the core `Button` class directly.\n\n## Theming\n\nThe suit-button component is almost entirely structural. You can rely on a\ntheme or build your application-specific theme styles in your application-level\nstylesheets. For example:\n\n```css\n/**\n * theme/component/button.css\n * @require suit-button\n */\n\n/**\n * Modifier: default buttons\n */\n\n.Button--default {\n    border-color: #d9d9d9 #d9d9d9 #ccc;\n    border-radius: 2px;\n    color: #444;\n    background-color: #eee;\n}\n\n.Button--default:hover,\n.Button--default:focus,\n.Button--default:active,\n.Button--default.is-pressed {\n    border-color: #c6c6c6 #c6c6c6 #bbb;\n    color: #222;\n    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);\n    background-color: #f5f5f5;\n}\n\n.Button--default:focus {\n    border-color: #069;\n    outline: 0;\n}\n\n.Button--default:active,\n.Button--default.is-pressed {\n    box-shadow: inset 0 1px 2px rgba(0,0,0, 0.2);\n    background-color: #ccc;\n}\n\n/**\n * Modifier: large buttons\n */\n\n.Button--large {\n    font-size: 1.5em;\n    padding: 0.75em 1.5em;\n}\n```\n\n## Browser support\n\n* Google Chrome (latest)\n* Opera (latest)\n* Firefox 4+\n* Safari 5+\n* Internet Explorer 8+\n",
+  "readmeFilename": "README.md",
+  "_id": "suit-button@2.0.0",
+  "description": "A SUIT component that provides a structural UI button template. It requires a button theme.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/suitcss/button.git"
+  }
+}

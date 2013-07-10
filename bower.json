@@ -1,0 +1,10 @@
+{
+  "name": "flight-visibility-pages",
+  "version": "0.0.0",
+  "dependencies": {
+    "normalize-css": "~2.1.2",
+    "suit-button": "~2.0.0",
+    "requirejs": "~2.1.8",
+    "flight-visibility": "~0.1.0"
+  }
+}
