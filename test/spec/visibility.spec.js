@@ -75,7 +75,6 @@ describeComponent('lib/visibility', function () {
       var data = eventSpy.mostRecentCall.data;
 
       expect(eventSpy).toHaveBeenTriggeredOn(document);
-      expect(data.event.type).toEqual(this.component.getEventName());
       expect(data.state).toEqual(document[this.component.getStateProperty()]);
     }.bind(this);
 

@@ -35,8 +35,8 @@ define(['flight-visibility'], function (Visibility) {
     console.log('The page is pre-rendering.');
   });
 
-  $(document).on('visibility-change', function (e, state) {
-    console.log('State:', state);
+  $(document).on('visibility-change', function (e, data) {
+    console.log('State:', data.state);
   });
 
   Visibility.attachTo(document);
