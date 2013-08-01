@@ -29,9 +29,6 @@ describeComponent('lib/visibility', function () {
     }
   }
 
-  var supportedSpy = spyOnEvent(document, 'visibility-supported');
-  var unsupportedSpy = spyOnEvent(document, 'visibility-unsupported');
-
   // Initialize the component and attach it to the DOM
   beforeEach(function () {
     setupComponent();
@@ -84,10 +81,13 @@ describeComponent('lib/visibility', function () {
   });
 
   it('should emit `visibility-supported` when the Page Visibility API is supported', function () {
+    var supportedSpy = spyOnEvent(document, 'visibility-supported');
+    setupComponent();
     expect(supportedSpy).toHaveBeenTriggeredOn(document);
   });
 
   it('should emit `visibility-unsupported` when the Page Visibility API is not supported', function () {
+    var unsupportedSpy = spyOnEvent(document, 'visibility-unsupported');
     document._mockHidden = 'unsupported';
     setupComponent();
     expect(unsupportedSpy).toHaveBeenTriggeredOn(document);
