@@ -1,4 +1,4 @@
-## HEAD
+## 0.2.0 (August 1, 2013)
 
 - Update Flight dependency to `~1.1.0`.
 - Remove the original event from the `visibility-change` event payload. It is

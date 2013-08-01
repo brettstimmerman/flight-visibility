@@ -1,7 +1,7 @@
 {
   "name": "flight-visibility",
   "description": "A Flight component for the Page Visibility API.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Brett Stimmerman",
   "devDependencies": {
     "karma": "*"
